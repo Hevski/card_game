@@ -2,6 +2,6 @@ public enum SuitType {
 
     HEARTS,
     DIAMONDS,
-    SPAKES,
-    CLUBS
+    SPADES,
+    CLUBS;
 }

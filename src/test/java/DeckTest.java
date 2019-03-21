@@ -27,6 +27,14 @@ public class DeckTest {
     @Test
     public void deckCanBePopulated(){
         deck.populate();
-        
+        deck.populate();
+        assertEquals(52, deck.countCards());
+    }
+
+    @Test
+    public void deckCanDealCard(){
+        ArrayList<Card> playersCards = new ArrayList<Card>();
+        playersCards.add(deck.dealCard());
+        assertEquals(1, playersCards.size());
     }
 }
