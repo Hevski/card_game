@@ -33,6 +33,7 @@ public class DeckTest {
 
     @Test
     public void deckCanDealCard(){
+        deck.populate();
         ArrayList<Card> playersCards = new ArrayList<Card>();
         playersCards.add(deck.dealCard());
         assertEquals(1, playersCards.size());

@@ -1,15 +1,13 @@
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Random;
 
 public class Deck {
 
     private ArrayList<Card> cards;
-//    private SuitType[] suits;
-//    private RankType[] ranks;
 
     public Deck(){
         this.cards = new ArrayList<Card>();
-        this.populate();
     }
 
     public ArrayList<Card> getCards() {
@@ -29,6 +27,17 @@ public class Deck {
         }
         Collections.shuffle(this.cards);
     }
+
+//    public void shuffle(){
+//        ArrayList<Card> shuffledCards = new ArrayList<Card>();
+//       int card = this.cards.size();
+//       Random random = new Random();
+//       for (int i = 0; i < card; i++){
+//           int randomIndex random.nextInt(cards.countCards() -1);
+//           int change = random.nextInt(i + card);
+//           shuffledCards.add(this.cards(change));
+//       }
+//    }
 
     public void deckReplenish(){
         this.cards = new ArrayList<Card>();
