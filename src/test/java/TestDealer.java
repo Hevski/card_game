@@ -53,12 +53,12 @@ public class TestDealer {
     }
 
     @Test
-    public void declaresWinner(){
+    public void canEvaluateScore(){
         dealer.add(player1);
         dealer.add(player2);
         player1.isDealtCard(card1);
         player2.isDealtCard(card2);
-        assertEquals(player2, dealer.declaresWinner(deck));
+        assertEquals(player2, dealer.evaluatesScores(deck));
     }
 
     @Test
@@ -67,11 +67,10 @@ public class TestDealer {
         dealer.add(player2);
         player1.isDealtCard(card2);
         player2.isDealtCard(card3);
-        dealer.declaresWinner(deck);
+        dealer.evaluatesScores(deck);
         assertEquals(0, player1.countCards());
         assertEquals(0, player2.countCards());
         assertEquals(52, deck.countCards());
-
     }
 
 }
