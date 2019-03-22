@@ -68,6 +68,7 @@ public class TestDealer {
         player1.isDealtCard(card2);
         player2.isDealtCard(card3);
         dealer.evaluatesScores(deck);
+        deck.populate();
         assertEquals(0, player1.countCards());
         assertEquals(0, player2.countCards());
         assertEquals(52, deck.countCards());

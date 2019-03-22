@@ -41,6 +41,7 @@ public class Deck {
 
     public void deckReplenish(){
         this.cards = new ArrayList<Card>();
+
     }
 
     public Card dealCard() {

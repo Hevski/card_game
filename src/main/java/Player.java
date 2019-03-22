@@ -32,6 +32,6 @@ public class Player {
     }
 
     public void emptyHand(){
-        this.hand = null;
+        this.hand.clear();
     }
 }

@@ -31,7 +31,7 @@ public class Dealer {
         }
     }
 
-    public void evaluatesScores(Deck deck) {
+    public Player evaluatesScores(Deck deck) {
         ArrayList<Integer> scores = new ArrayList<Integer>();
         for (Player player : this.players){
             scores.add(player.returnsCardValue());
@@ -42,11 +42,12 @@ public class Dealer {
             for (Player player : this.players){
                 if (player.returnsCardValue() == (scores.get(0))){
                     winner = player;
-                    declaresWinner(winner);
                 }
             }
+            return winner;
         } else {
             resetGame(deck);
+            return null;
         }
     }
 
@@ -57,7 +58,4 @@ public class Dealer {
         }
     }
 
-    public Player declaresWinner(Player winner){
-        return winner;
-    }
 }
